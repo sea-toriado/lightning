@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active: @activeProfile@
+server:
+  servlet:
+    context-path: '/dtn'
+
+weather:
+  lightning:
+    path: 'src/main/resources/assets/lightning.json'
+  assets:
+    path: 'src/main/resources/assets/assets.json'
+  alerted-assets:
+    path: 'src/main/resources/assets/alerted-assets.json'
+  map:
+    zoom-level: 12
+  alert:
+    message: 'lightning alert for {}:{}'
+    exception:
+      flash-type: 9
+
+response:
+  success:
+    code: 200
+    message: 'Successful'
+    details: 'Successfully processed request'
+  failed:
+    code: 400
+    message: 'Failed'
+    details: 'Failed to process request'
